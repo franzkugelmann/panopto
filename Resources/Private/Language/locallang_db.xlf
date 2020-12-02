@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-12-02T11:45:12Z"
+	product-name="panopto">
+		<header />
+		<body>
+			<trans-unit id="ce.panopto.header">
+				<source>Panopto</source>
+			</trans-unit>
+			<trans-unit id="ce.panopto.description">
+				<source>Adds a Panopto Player Content Element</source>
+			</trans-unit>
+			<trans-unit id="ce.panopto.videoUid">
+				<source>Video ID</source>
+			</trans-unit>
+			<trans-unit id="ce.panopto.playerType">
+				<source>Player Type</source>
+			</trans-unit>
+			<trans-unit id="ce.panopto.playerType.player">
+				<source>Player</source>
+			</trans-unit>
+			<trans-unit id="ce.panopto.playerType.viewer">
+				<source>Viewer</source>
+			</trans-unit>
+			<trans-unit id="ce.panopto.autoplay">
+				<source>Autoplay</source>
+			</trans-unit>
+			<trans-unit id="ce.panopto.showBrand">
+				<source>Show custom logo on the splash screen</source>
+			</trans-unit>
+			<trans-unit id="ce.panopto.offerViewer">
+				<source>Show view on panopto button</source>
+			</trans-unit>
+			<trans-unit id="ce.panopto.startOffset">
+				<source>Sets the time to start the video (in seconds)</source>
+			</trans-unit>
+			<trans-unit id="ce.panopto.showTitle">
+				<source>Show the video title</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,15 @@
+mod.wizards.newContentElement.wizardItems {
+  common {
+    elements {
+      panopto {
+        iconIdentifier = ce.panopto
+        title = LLL:EXT:panopto/Resources/Private/Language/locallang_db.xlf:ce.panopto.header
+        description = LLL:EXT:panopto/Resources/Private/Language/locallang_db.xlf:ce.panopto.description
+        tt_content_defValues {
+          CType = ce.panopto
+        }
+      }
+    }
+    show := addToList(panopto)
+  }
+}

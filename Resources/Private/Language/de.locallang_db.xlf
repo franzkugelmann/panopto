@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-12-02T11:45:12Z"
+	product-name="panopto">
+		<header />
+		<body>
+		<trans-unit id="ce.panopto.header">
+			<source>Panopto</source>
+			<target>Panopto</target>
+		</trans-unit>
+		<trans-unit id="ce.panopto.description">
+			<source>Adds a Panopto Player Content Element</source>
+			<target>Fügt ein Panopto Player Content Element hinzu</target>
+		</trans-unit>
+		<trans-unit id="ce.panopto.videoUid">
+			<source>Video ID</source>
+			<target>Video ID</target>
+		</trans-unit>
+		<trans-unit id="ce.panopto.playerType">
+			<source>Player Type</source>
+			<target>Typ des Players</target>
+		</trans-unit>
+		<trans-unit id="ce.panopto.playerType.player">
+			<source>Player</source>
+			<target>Player</target>
+		</trans-unit>
+		<trans-unit id="ce.panopto.playerType.viewer">
+			<source>Full Panopto Viewer</source>
+			<target>Kompletten Panopto Viewer</target>
+		</trans-unit>
+		<trans-unit id="ce.panopto.autoplay">
+			<source>Autoplay</source>
+			<target>Automatische Wiedergabe</target>
+		</trans-unit>
+		<trans-unit id="ce.panopto.showBrand">
+			<source>Show custom logo on the splash screen</source>
+			<target>Zeige das benutzerdefinierte Logo im Startbildschirm</target>
+		</trans-unit>
+		<trans-unit id="ce.panopto.offerViewer">
+			<source>Show view on panopto button</source>
+			<target>Zeige Button "Auf Panopto ansehen"</target>
+		</trans-unit>
+		<trans-unit id="ce.panopto.startOffset">
+			<source>Sets the time to start the video (in seconds)</source>
+			<target>Setzte die Startzeit des Videos (in Sekunden)</target>
+		</trans-unit>
+		<trans-unit id="ce.panopto.showTitle">
+			<source>Show the video title</source>
+			<target>Zeige den Videotitel</target>
+		</trans-unit>
+		</body>
+	</file>
+</xliff>

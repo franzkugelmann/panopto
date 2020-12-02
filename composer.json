@@ -1,0 +1,22 @@
+{
+  "name": "in2code/panopto",
+  "description": "Adds a content element for the end-to-end-video-content-management-system panopto",
+  "homepage": "https://in2code.de",
+  "authors": [
+    {
+      "name": "Sebastian Stein",
+      "email": "sebastian.stein@in2code.de"
+    }
+  ],
+  "type": "typo3-cms-extension",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "typo3/cms-core": "^10.4",
+    "php": ">=7.2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "In2code\\Panopto\\": "Classes"
+    }
+  }
+}
