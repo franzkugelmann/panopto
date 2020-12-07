@@ -1,0 +1,15 @@
+<html
+	xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+
+<f:section name="Header">
+	<f:render partial="Header/All" arguments="{_all}"/>
+</f:section>
+
+<f:section name="Main">
+	<div class="tx-panopto__container">
+		<iframe src="{panoptoUrl}" frameborder="0" height="800" width="1000" class="tx-panopto__iframe"></iframe>
+	</div>
+</f:section>
+</html>

@@ -1,0 +1,25 @@
+tt_content.ce\.panopto =< lib.contentElement
+tt_content.ce\.panopto {
+  templateRootPaths {
+    20 = EXT:panopto/Resources/Private/Templates/
+  }
+
+  partialRootPaths {
+    20 = EXT:panopto/Resources/Private/Partials/
+  }
+
+  layoutRootPaths {
+    20 = EXT:panopto/Resources/Private/Layouts/
+  }
+
+  templateName = Panopto
+
+  dataProcessing {
+    10 = In2code\Panopto\DataProcessing\FlexFormProcessor
+    20 = In2code\Panopto\DataProcessing\BuildPanoptoUrlProcessor
+    20 {
+      domain = {$PANOPTO.DOMAIN}
+      path = {$PANOPTO.PATH}
+    }
+  }
+}
