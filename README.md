@@ -1,6 +1,6 @@
 # TYPO3 Extension `panopto`
 
-Provides a content element for the integration of the end-to-end-video-content-management-system panopto.
+Provides a content element and the ability to add videos of the end-to-end-video-content-management-system panopto via "Add media by URL" in Text & Media elements.
 
 ## Usage
 
@@ -20,9 +20,11 @@ the cType for this extension is `ce.panopto`
 there are typoscript constants for the panopto domain and path which can be easily overwritten.
 
 ```typo3_typoscript
-PANOPTO {
-  DOMAIN = https://demo.hosted.panopto.com/
-  PATH = Panopto/Pages/
+plugin.tx_panopto {
+    settings {
+        domain = https://demo.hosted.panopto.eu/
+        path = Panopto/Pages/
+    }
 }
 ```
 
@@ -51,3 +53,6 @@ Fig. 1) Create Content Element wizard
 
 ![Panopto Content Element](Documentation/Images/ce.png)
 Fig. 2) Panopto Content Element
+
+![Panopto File Reference](Documentation/Images/fileReference.png)
+Fig. 3) Panopto File Reference in an Text Media Content Element
