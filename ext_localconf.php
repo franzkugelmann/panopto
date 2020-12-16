@@ -28,5 +28,17 @@ call_user_func(
                 ['source' => $icon['source']]
             );
         }
+
+        $rendererRegistry = \TYPO3\CMS\Core\Resource\Rendering\RendererRegistry::getInstance();
+        $rendererRegistry->registerRendererClass(\In2code\Panopto\Resource\Rendering\PanoptoRenderer::class);
+
+
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['fal']['onlineMediaHelpers']['pan'] =
+            \In2code\Panopto\Resource\OnlineMedia\Helpers\PanoptoHelper::class;
+
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['mediafile_ext'] .=
+            ',pan';
+
+        $GLOBALS['TYPO3_CONF_VARS']['SYS']['FileInfo']['fileExtensionToMimeType']['pan'] = 'video/pan';
     }
 );

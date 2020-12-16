@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace In2code\Panopto\DataProcessing;
 
-use TYPO3\CMS\Core\Utility\MathUtility;
+use In2code\Panopto\Utility\UrlUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
 
@@ -25,9 +25,15 @@ use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
  */
 class BuildPanoptoUrlProcessor implements DataProcessorInterface
 {
-    protected string $defaultVariableName = 'panoptoUrl';
+    /**
+     * @var string
+     */
+    protected $defaultVariableName = 'panoptoUrl';
 
-    protected array $processorConfiguration = [];
+    /**
+     * @var array
+     */
+    protected $processorConfiguration = [];
 
     /**
      * @param ContentObjectRenderer $cObj The data of the content element or page
@@ -47,7 +53,12 @@ class BuildPanoptoUrlProcessor implements DataProcessorInterface
 
         if (!empty($flexFormData) && is_array($flexFormData) && array_key_exists('videoUid', $flexFormData)
         ) {
-            $url = $this->buildUrl($flexFormData);
+            $url =
+                UrlUtility::buildPanoptoUrl(
+                    $this->processorConfiguration['domain'],
+                    $this->processorConfiguration['path'],
+                    $flexFormData
+                );
             $targetVariableName = $cObj->stdWrapValue('as', $this->processorConfiguration);
 
             if (!empty($targetVariableName)) {
@@ -60,43 +71,5 @@ class BuildPanoptoUrlProcessor implements DataProcessorInterface
         return $processedData;
     }
 
-    protected function buildUrl(array $settings): string
-    {
-        $url = '';
-        $domain = rtrim($this->processorConfiguration['domain'], '/') . '/';
-        $path = rtrim(ltrim($this->processorConfiguration['path'], '/'), '/') . '/';
 
-        if (empty($settings['playerType']) && ($settings['playerType'] !== 'Embed' || $settings['playerType'] !== 'Viewer')) {
-            $playerType = 'Embed';
-        } else {
-            $playerType = $settings['playerType'];
-        }
-
-        if (!empty($settings['videoUid'])) {
-            $url = $domain . $path . $playerType . '.aspx?id=' . $settings['videoUid'];
-
-            $options = [
-                'autoplay' => (bool)$settings['autoplay'],
-                'showbrand' => (bool)$settings['showBrand'],
-                'offerviewer' => (bool)$settings['offerViewer'],
-                'showTitle' => (bool)$settings['showTitle'],
-            ];
-
-            foreach ($options as $option => $value) {
-                if ($value) {
-                    $value = 'true';
-                } else {
-                    $value = 'false';
-                }
-
-                $url .= '&' . $option . '=' . $value;
-            }
-
-            if ($settings['startOffset'] !== '' && MathUtility::canBeInterpretedAsInteger($settings['startOffset'])) {
-                $url .= '&start=' . $settings['startOffset'];
-            }
-        }
-
-        return $url;
-    }
 }
