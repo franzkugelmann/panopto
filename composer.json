@@ -18,5 +18,10 @@
     "psr-4": {
       "In2code\\Panopto\\": "Classes"
     }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "panopto"
+    }
   }
 }
