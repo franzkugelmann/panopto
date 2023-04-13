@@ -45,7 +45,7 @@ class PanoptoHelper extends AbstractHelper
      */
     public function transformUrlToFile($url, Folder $targetFolder): ?File
     {
-        if (!UrlUtility::isTargetHost($url, 'panopto.eu')) {
+        if (!UrlUtility::isTargetHost($url, 'panopto.com') || !UrlUtility::isTargetHost($url, 'panopto.eu')) {
             return null;
         }
 

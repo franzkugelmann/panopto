@@ -15,6 +15,8 @@ https://support.panopto.com/s/article/Embed-a-Video
 
 the cType for this extension is `ce.panopto`
 
+#### Panopto id for testvideo: `2b69a50b-6733-4422-bd5a-af6a0183fea7`
+
 #### Panopto domain / path
 
 there are typoscript constants for the panopto domain and path which can be easily overwritten.
@@ -55,4 +57,4 @@ Fig. 1) Create Content Element wizard
 Fig. 2) Panopto Content Element
 
 ![Panopto File Reference](Documentation/Images/fileReference.png)
-Fig. 3) Panopto File Reference in an Text Media Content Element
+Fig. 3) Panopto File Reference in a Text Media Content Element

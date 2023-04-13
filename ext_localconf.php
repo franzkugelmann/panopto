@@ -29,7 +29,7 @@ call_user_func(
             );
         }
 
-        $rendererRegistry = \TYPO3\CMS\Core\Resource\Rendering\RendererRegistry::getInstance();
+        $rendererRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Resource\Rendering\RendererRegistry::class);
         $rendererRegistry->registerRendererClass(\In2code\Panopto\Resource\Rendering\PanoptoRenderer::class);
 
 
