@@ -1,6 +1,6 @@
 plugin.tx_panopto {
   settings {
-    domain = https://demo.hosted.panopto.com/
+    domain = https://howtovideos.hosted.panopto.com/
     path = Panopto/Pages/
   }
 }
