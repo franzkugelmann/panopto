@@ -24,7 +24,7 @@ there are typoscript constants for the panopto domain and path which can be easi
 ```typo3_typoscript
 plugin.tx_panopto {
     settings {
-        domain = https://demo.hosted.panopto.eu/
+        domain = https://howtovideos.hosted.panopto.com/
         path = Panopto/Pages/
     }
 }

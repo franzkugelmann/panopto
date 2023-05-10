@@ -15,6 +15,6 @@ class ObjectUtility
      */
     public static function getConfigurationManager(): ConfigurationManager
     {
-        GeneralUtility::makeInstance(ConfigurationManager::class);
+        return GeneralUtility::makeInstance(ConfigurationManager::class);
     }
 }
